@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        h1 {
+            color: #b9b35d;
+        }
+
+        .color {
+            color: #20B2AA
+        }
+
+        .bg {
+            background-color: #b50039;
+        }
+
+        .font {
+            font-size: 30px;
+        }
+
+        .text-primary {
+            color: #b9b35d;
+        }
+
+        .text-secondary {
+            color: #20B2AA;
+
+        }
+
+        li {
+            color: #71b95d;
+        }
+
+        .active {
+            color: #b50039;
+        }
+
+        #header {
+            color: #b50039;
+        }
+
+        #main {
+            color: #20B2AA;
+        }
+
+        #sidebar {
+            color: #71b95d;
+        }
+
+        #footer {
+            color: #b9b35d;
+        }
+
+        /* 
+        命名規則
+        - 以.(class)或#(id)開頭
+        - 只允許使用英文、數字、連字符-和底線_
+        - 必須是字元開始，不能用數字開頭
+        - 可以使用中文命名，但不要這樣做，謝謝
+        - 有區分大小寫
+        */
+
+        /* 半形空白為後代，選擇到兒子跟孫子們 */
+        nav p {
+            color: #71b95d;
+        }
+
+        /* > 為子代選擇器，只選擇到兒子 */
+        nav>p {
+            color: #20B2AA;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS 的選擇器</h1>
+    <p>CSS 有非常多種選擇則器，幫助我們在撰寫樣式的時候，運用這些選擇器選擇到目標。</p>
+    <h1 class="color bg fornt">Class 選擇器</h1>
+    <p>Class 具有重複使用的特性，是CSS所有選擇器裡面使用率最高的選擇，在Boorstrap時候，可以看到大量樣是被設計成class。</p>
+    <h3>1.相同元素需要不同外觀時</h3>
+    <ul>
+        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda perspiciatis minima nam asperiores?
+            Dolorem enim error, repellendus suscipit obcaecati minus autem architecto quos delectus dicta natus!
+            Commodi
+            magnam suscipit consequuntur.</li>
+        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda perspiciatis minima nam asperiores?
+            Dolorem enim error, repellendus suscipit obcaecati minus autem architecto quos delectus dicta natus!
+            Commodi
+            magnam suscipit consequuntur.</li>
+        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda perspiciatis minima nam asperiores?
+            Dolorem enim error, repellendus suscipit obcaecati minus autem architecto quos delectus dicta natus!
+            Commodi
+            magnam suscipit consequuntur.</li>
+        <li class="active">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda perspiciatis minima
+            nam
+            asperiores?
+            Dolorem enim error, repellendus suscipit obcaecati minus autem architecto quos delectus dicta natus!
+            Commodi
+            magnam suscipit consequuntur.</li>
+        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda perspiciatis minima nam asperiores?
+            Dolorem enim error, repellendus suscipit obcaecati minus autem architecto quos delectus dicta natus!
+            Commodi
+            magnam suscipit consequuntur.</li>
+    </ul>
+    <h3>2.重複使用時</h2>
+        <p>Lorem ipsum dolor sit <a class="font" href="#">空条徐倫</a>a>amet consectetur adipisicing elit. In placeat
+            quod unde
+            at nostrum obcaecati quae voluptatem reprehe<em class="font">空条承太郎</em>nderit. A, mollitia in dolorum
+            doloremque
+            necessitatibus consectetur
+            consequatur harum? Repellendus, tempora? Aperiam?</p>
+
+        <hr>
+        <h1>id 選擇器</h1>
+        <p>一份文件裡面，只允許一個獨一無二的id名稱，具有唯一性</p>
+        <p>通常作為網頁區塊名稱使用，或是 Javascrip 或 jQuery 操作元素的選擇器</p>
+        <p>對程式來說，id是最簡單、最快速、最直接使用的選擇方式。</p>
+        <div id="header">這是 header 區塊</div>
+        <div id="main">這是 main 區塊</div>
+        <div id="sidebar">這是 sidebar 區塊</div>
+        <div id="footer">這是 footer 區塊</div>
+
+        <hr>
+
+        <h1>後代選擇器與子代選擇器</h1>
+        <nav>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque corrupti voluptatum et ullam maxime porro
+                perferendis quis eum quos assumenda at molestiae, ipsa saepe ducimus odio voluptates. Saepe, aspernatur
+                numquam.</p>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At beatae eius molestiae praesentium
+                    eligendi? Suscipit atque ex officia velit tempora consequuntur cum qui excepturi eaque ab quod, in
+                    ipsam praesentium!</p>
+            </div>
+        </nav>
+</body>
+
+</html>

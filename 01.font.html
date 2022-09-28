@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+
+    <style>
+        /* 業面預設文字大小為16px */
+        /* html是根元素 :root選擇到html、:root是偽類選擇器的一種 */
+        html {
+            font-size: 16px;
+        }
+
+        body {
+            /* 設定字形家族 */
+            font-family: "微軟正黑體";
+            /* font-family: 'Righteous', cursive; */
+        }
+
+        .font-style {
+            /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+            /* 設定字體大小 pz、em、rem */
+            font-size: 16px;
+            /* 設定斜體 */
+            font-style: italic;
+            /* 設定粗體 bolder 、 100~900 */
+            font-weight: bold;
+            /* 設定句子字體都變成大寫，但第一個字母便比較大 */
+            font-variant: small-caps;
+        }
+
+        .google-font {
+            font-family: 'Righteous', cursive;
+        }
+
+        /* 自定義字形，需要字體檔案 */
+        @font-face {
+            /* 自訂名稱，為src設定一個字形家族名稱 */
+            font-family: 'mydisney';
+            src: url('waltograph42.otf'), url('Adine Kirnberg.ttf')
+        }
+
+        .font-set {
+            font-family: 'mydisney';
+            font-size: 50px;
+        }
+
+        .text-style {
+            /* 文字顏色 */
+            color: #adadad;
+            /* 設定文字、inline、inline-block的位置 */
+            /* left、center、right */
+            text-align: center;
+            /* none、underline、overline、line-through */
+            text-decoration: underline;
+            /* 縮排，可以負數*/
+            text-indent: -2rem;
+            /* uppercase(全大寫)、lowercase(全小寫)、capitalize(每個單字第一個大寫)*/
+            text-transform: capitalize;
+            /* 水平位移量、垂直位移量(正往下、負往上)、陰影的模糊半徑、顏色 */
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+            /* 英文字母或中文字中的間隔 */
+            letter-spacing: 5px;
+            /* 英文單字間隔，要有空格，中文很難有空格，較適合英文 */
+            word-spacing: 20px;
+            /* 行高 */
+            line-height: 30px;
+        }
+
+        .multi-text-shadow {
+            font-size: 9rem;
+            text-shadow:
+                1px 1px 1px rgb(181, 187, 250),
+                2px 2px 2px rgb(233, 122, 248),
+                3px 3px 3px rgb(246, 74, 74),
+                4px 4px 4px rgba(255, 0, 0, 1)
+        }
+
+        /* 顯示顏色 */
+        a:link {
+            color: purple;
+            text-decoration: none;
+        }
+
+        /* 拜訪後 */
+        a:visited {
+            color: gray;
+        }
+
+        /* 滑鼠移入 */
+        a:hover {
+            color: darkorange;
+        }
+
+        /* 點擊時狀態 */
+        a:active {
+            color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>1.font的樣式設定</h1>
+    <p class="font-style">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut delectus, eum quisquam expedita
+        enim necessitatibus a0
+        quaerat doloremque dolore, excepturi, doloribus cum recusandae corporis deleniti! Facilis distinctio mollitia
+        explicabo alias!</p>
+
+    <h2>使用Google font</h2>
+    <p class="google-font">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem accusantium at beatae libero
+        ipsum, suscipit eius sint perspiciatis autem voluptatibus, mollitia repellat quaerat, omnis eveniet dolores
+        officia natus quo quod?</p>
+
+    <h2>自訂樣式</h2>
+    <p class="font-set">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ex quasi reiciendis dolor
+        eius, veritatis
+        perspiciatis molestias ipsum animi consequatur deleniti minima cumque excepturi. Inventore qui magnam expedita
+        dolorem asperiores.</p>
+    <hr>
+
+    <h1>2.Text樣式設定</h1>
+    <p class="text-style">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga, maxime hic. Corrupti
+        necessitatibus labore
+        impedit reiciendis porro quo vitae dignissimos voluptas error maiores, laboriosam assumenda cumque autem rem
+        doloremque provident?</p>
+
+    <h2>多重文字陰影</h2>
+    <p class="multi-text-shadow">lorem</p>
+
+    <hr>
+
+    <h1>3.連結顏色變化</h1>
+    <a href="#">Google</a>
+
+    <hr>
+
+    <h1>4.rem與em差異</h1>
+    <ul>
+        <li>文字預設大小為 16px，也就是1rem</li>
+        <li>rem跟著根元素 html 預設字體打小去倍數增加。例如 16px=>1rem，36px=>2rem</li>
+    </ul>
+    <h2>REM</h2>
+    <div style="font-size: 1rem;">
+        font
+        <div style="font-size: 2rem;">
+            font
+            <div style="font-size: 3rem;">font</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <h2>EM</h2>
+    <p>為父層或祖先曾 font-size的倍數，父層有設定尺寸就以他為基準，若沒有會繼續往外面尋找，若都沒有，最後會以root 預設 font-size 為基準，也就是16px</p>
+    <div style="font-size: 1em;">
+        font
+        <div style="font-size: 2em;">
+            font
+            <div style="font-size: 3em;">font</div>
+        </div>
+    </div>
+
+</body>
+
+</html>
